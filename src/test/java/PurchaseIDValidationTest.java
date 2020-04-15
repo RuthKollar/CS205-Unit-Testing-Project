@@ -33,6 +33,10 @@ public class PurchaseIDValidationTest {
         //Checks only valid ID's get added to purchaseIDlist
         assertFalse(Purchase.isPurchaseIDTaken(-1));
 
+        //Reset for next test
+        TestResetter.clearIDLists();
+
+
     }
 
     @Test
@@ -41,6 +45,10 @@ public class PurchaseIDValidationTest {
         //By the overridden equals Purchase method, this should make
         //repeatIDPurchase and invalidCustomerPurchase equal
         assertEquals(repeatIDPurchase,invalidCustomerPurchase);
+
+
+        //Reset for next test
+        TestResetter.clearIDLists();
 
     }
 }

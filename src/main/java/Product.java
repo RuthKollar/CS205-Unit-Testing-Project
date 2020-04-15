@@ -224,4 +224,10 @@ public abstract class Product {
     public static boolean isProductIDInUse(int productID) {
         return productIDList.contains(productID);
     }
+
+    ////////////////////////////////////////////////////////////
+    //CLEAR ID LIST: TESTING PURPOSES
+    public static void clearIDList() {
+        productIDList.clear();
+    }
 }

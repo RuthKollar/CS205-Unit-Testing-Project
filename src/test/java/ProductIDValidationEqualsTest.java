@@ -1,9 +1,10 @@
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
-//Tests that Product Constructor: sets negative or existing ID's to -1
-public class ProductIDValidationTest {
+public class ProductIDValidationEqualsTest {
+
 
     Product validP1 = new MechPencil(1);
     Product validP2 = new FountainPen(2);
@@ -14,17 +15,6 @@ public class ProductIDValidationTest {
 
     //invalid ID because negative
     Product invalidP2 = new FountainPen(-4);
-
-    @Test
-    public void isProductIDInUse() {
-        //Checking both subclasses' ID's get added
-        assertTrue(Product.isProductIDInUse(1));
-        assertTrue(Product.isProductIDInUse(2));
-
-        //Checking ONLY valid ID's are added to ProductIDList
-        assertFalse(Product.isProductIDInUse(-1));
-        assertFalse(Product.isProductIDInUse(-4) );
-    }
 
     @Test
     public void testEquals() {
@@ -38,5 +28,10 @@ public class ProductIDValidationTest {
         //If code is working properly, no two Products can have equal ID's
         assertEquals(validP1,validP1);
         assertNotEquals(validP1,invalidP1);
+
+        //Reset for next test
+        TestResetter.clearIDLists();
+
     }
+
 }

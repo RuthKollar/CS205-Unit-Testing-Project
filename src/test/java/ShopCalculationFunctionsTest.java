@@ -35,6 +35,10 @@ public class ShopCalculationFunctionsTest {
         shop.removePurchase(purchase2);
         assertEquals(5,shop.calculateTotalShopIncome(),0);
 
+        //Reset for next test
+        TestResetter.clearIDLists();
+
+
     }
 
     @Test
@@ -55,7 +59,8 @@ public class ShopCalculationFunctionsTest {
         shop.addProduct(product3);
         assertSame(product3,shop.findBestSellingProduct());
 
-
+        //Reset for next test
+        TestResetter.clearIDLists();
 
     }
 

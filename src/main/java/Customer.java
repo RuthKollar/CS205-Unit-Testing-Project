@@ -167,4 +167,10 @@ public class Customer {
             return false;
         }
     }
+
+    ////////////////////////////////////////////////////////////
+    //CLEAR ID LIST: TESTING PURPOSES
+    public static void clearIDList() {
+        customerIDList.clear();
+    }
 }

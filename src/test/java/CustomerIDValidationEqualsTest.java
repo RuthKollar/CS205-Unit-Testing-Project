@@ -1,9 +1,9 @@
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
-//Tests that Customer Constructor sets negative or existing ID's to -1
-public class CustomerIDValidationTest {
+public class CustomerIDValidationEqualsTest {
 
     Customer validC1 = new Customer(1);
     Customer validC2 = new Customer(2);
@@ -17,18 +17,6 @@ public class CustomerIDValidationTest {
 
 
     @Test
-    public void testIsCustomerIDInUse() {
-
-        //Checking the valid ID's were added to customerIDList array
-        assertEquals(true, Customer.isCustomerIDInUse(1));
-        assertEquals(true, Customer.isCustomerIDInUse(2));
-
-        //Checking ONLY valid ID's are added to CustomerIDList array
-        assertEquals(false, Customer.isCustomerIDInUse(-1));
-        assertEquals(false, Customer.isCustomerIDInUse(-4));
-    }
-
-    @Test
     public void testEquals() {
         //Checking Invalid ID's are set to -1
         //The ID's of invalid Customers should always be set to -1
@@ -40,5 +28,9 @@ public class CustomerIDValidationTest {
         //If code is working properly, no two valid customers should be equal
         assertEquals(validC1,validC1);
         assertNotEquals(validC1,invalidC1);
+
+        //Reset for next test
+        TestResetter.clearIDLists();
     }
+
 }

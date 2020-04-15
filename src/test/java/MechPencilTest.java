@@ -20,6 +20,9 @@ public class MechPencilTest {
         assertEquals("03", f1.getLeadDiameter());
         assertEquals("twist", f1.getLeadDispenseMechanism());
 
+        //Reset for next test
+        TestResetter.clearIDLists();
+
     }
 
 }

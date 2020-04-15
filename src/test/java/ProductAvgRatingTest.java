@@ -42,6 +42,9 @@ public class ProductAvgRatingTest {
         product.deleteReview(review1);
         assertEquals(2.5,product.getAvgRating(),0);
 
+        //Reset for next test
+        TestResetter.clearIDLists();
+
 
     }
 }

@@ -1,3 +1,12 @@
+//Saving List of Add Functions
+//Scratchwork
+//NEED:
+////Reset for next test:
+//          Customer.clearIDList();
+//          Product.clearIDList();
+//          Purchase.clearIDList();
+
+
 import org.junit.Test;
 import java.util.ArrayList;
 import static org.junit.Assert.*;
@@ -140,8 +149,6 @@ public class AddFunctionValidationTests {
         purchaseMain.removeItem(validProduct);
         assertEquals(2,validProduct.getQtyStock());
         assertEquals(0,validProduct.getQtyPurchase());
-
-
 
     }
 

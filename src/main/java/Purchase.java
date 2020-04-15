@@ -194,5 +194,11 @@ public class Purchase {
         }
     }
 
+    ////////////////////////////////////////////////////////////
+    //CLEAR ID LIST: TESTING PURPOSES
+    public static void clearIDList() {
+        purchaseIDList.clear();
+    }
+
 
 }
